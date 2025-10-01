@@ -1,0 +1,9 @@
+/Users/lambdajon/workspace/regulator/target/debug/deps/serde_path_to_error-c74cbeccd075b466.d: /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/lib.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/de.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/path.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/ser.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/wrap.rs
+
+/Users/lambdajon/workspace/regulator/target/debug/deps/libserde_path_to_error-c74cbeccd075b466.rmeta: /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/lib.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/de.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/path.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/ser.rs /Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/wrap.rs
+
+/Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/lib.rs:
+/Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/de.rs:
+/Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/path.rs:
+/Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/ser.rs:
+/Users/lambdajon/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.16/src/wrap.rs:

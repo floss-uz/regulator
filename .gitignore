@@ -9,3 +9,5 @@
 
 # Running daemon PID
 .daemon
+
+.direnv

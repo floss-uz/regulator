@@ -4,6 +4,7 @@ import Data.Text qualified as T
 import System.Environment (getEnv)
 import Data.HashMap.Strict (HashMap)
 import Control.Concurrent.STM (TVar, newTVarIO)
+import RegulatorBot.Types (Community)
 
 
 type Model = BotState
@@ -11,6 +12,7 @@ type Model = BotState
 data BotState = BotState
   { botSettings :: Settings
   , rfc :: TVar (HashMap T.Text T.Text)
+  , communities :: TVar [Community]
   }
 
 data Settings = Settings

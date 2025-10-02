@@ -1,6 +1,5 @@
 module RegulatorBot.State where
 
-import Data.Text (Text)
 import Data.Text qualified as T
 import System.Environment (getEnv)
 import Data.HashMap.Strict (HashMap)
@@ -11,11 +10,11 @@ type Model = BotState
 
 data BotState = BotState
   { botSettings :: Settings
-  , rfc :: TVar (HashMap Text Text)
+  , rfc :: TVar (HashMap T.Text T.Text)
   }
 
 data Settings = Settings
-  { botName :: Text
+  { botName :: T.Text
   , botToken :: String
   }
   deriving (Show)

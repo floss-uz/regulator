@@ -4,8 +4,9 @@ import Data.Text qualified as T
 import System.Environment (getEnv)
 import Data.HashMap.Strict (HashMap)
 import Control.Concurrent.STM (TVar, newTVarIO)
-import RegulatorBot.Types (Community)
 
+import RegulatorBot.Types (Community)
+import qualified Data.HashMap.Strict as HM
 
 type Model = BotState
 
@@ -23,7 +24,9 @@ data Settings = Settings
 
 newBotState :: Settings -> IO BotState
 newBotState settings = do
-  pure BotState{botSettings = settings}
+  communities <- newTVarIO []
+  rfc <- newTVarIO HM.empty 
+  return BotState{botSettings = settings, ..}
 
 loadDefaultSettings :: IO Settings
 loadDefaultSettings = do

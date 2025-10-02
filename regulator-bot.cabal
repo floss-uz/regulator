@@ -1,0 +1,69 @@
+cabal-version:   3.0
+name:            regulator-bot
+version:         0.1.0.0
+license:         BSD-3-Clause
+license-file:    LICENSE
+author:          lambdajon
+maintainer:      lambdajon42@gmail.com
+category:        Network
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+  ghc-options: -Wall 
+
+library
+  import:             warnings
+  exposed-modules:
+    RegulatorBot
+    
+
+  build-depends:
+    , base
+    , async
+    , aeson
+    , bytestring
+    , containers
+    , http-client
+    , github
+    , strict-containers
+    , telegram-bot-api
+    , telegram-bot-simple
+    , text
+    , stm
+    , vector
+    , unordered-containers
+
+  hs-source-dirs:     src
+  default-language:   GHC2024
+  default-extensions:
+    BlockArguments
+    DeriveAnyClass
+    DerivingStrategies
+    LambdaCase
+    OverloadedStrings
+    RecordWildCards
+    ImportQualifiedPost 
+
+executable regulator-bot
+  import:           warnings
+  main-is:          Main.hs
+  build-depends:
+    , base
+    , regulator-bot
+    , telegram-bot-api
+
+  hs-source-dirs:   app
+  ghc-options: -Wall  -O2 -threaded -rtsopts -with-rtsopts=-N
+  default-language: GHC2024
+
+test-suite regulator-bot-test
+  import:           warnings
+  default-language: GHC2024
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  main-is:          Main.hs
+  build-depends:
+    , base
+    , regulator-bot
+

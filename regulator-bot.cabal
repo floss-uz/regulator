@@ -48,7 +48,8 @@ library
     LambdaCase
     OverloadedStrings
     RecordWildCards
-    ImportQualifiedPost 
+    ImportQualifiedPost
+    OverloadedRecordDot
 
 executable regulator-bot
   import:           warnings

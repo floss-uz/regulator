@@ -1,7 +1,7 @@
 module RegulatorBot.Types where
 
 import Data.Aeson
-import qualified Data.Text as T
+import Data.Text qualified as T
 import GHC.Generics
 
 data Action

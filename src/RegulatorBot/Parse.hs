@@ -18,6 +18,5 @@ updateToAction settings@Settings{..} update
 handleStart :: Settings -> Update -> Maybe Action
 handleStart _ Update{..} = Just Start
 
-
 handleGroup :: Settings -> Update -> Maybe Action
-handleGroup _ Update{..} = Just Group 
+handleGroup _ Update{..} = Just Group

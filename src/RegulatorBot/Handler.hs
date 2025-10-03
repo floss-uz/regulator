@@ -13,4 +13,3 @@ handleAction Start model =
 handleAction Group model =
   model <# do
     replyCommunities model
-

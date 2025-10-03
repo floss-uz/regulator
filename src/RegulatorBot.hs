@@ -2,16 +2,16 @@ module RegulatorBot
   ( run
   ) where
 
-import qualified Data.Text as T
+import Data.Text qualified as T
 
-import Telegram.Bot.API
-import Telegram.Bot.Simple
+import Data.Aeson (decode)
 import Data.ByteString.Lazy qualified as B
 import RegulatorBot.Handler
 import RegulatorBot.Parse
 import RegulatorBot.State
 import RegulatorBot.Types
-
+import Telegram.Bot.API
+import Telegram.Bot.Simple
 
 regulatorBot :: Model -> BotApp Model Action
 regulatorBot st =
@@ -23,6 +23,11 @@ regulatorBot st =
     }
  where
   actionParser update BotState{..} = updateToAction botSettings update
+
+parseCommunities :: B.ByteString -> Maybe [Community]
+parseCommunities = decode
+
+
 
 run :: IO ()
 run = do

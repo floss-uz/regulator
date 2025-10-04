@@ -16,6 +16,11 @@ library
   import:             warnings
   exposed-modules:
     RegulatorBot
+    RegulatorBot.Handler
+    RegulatorBot.Reply
+    RegulatorBot.State
+    RegulatorBot.Types
+    RegulatorBot.Parse
     
 
   build-depends:
@@ -43,7 +48,8 @@ library
     LambdaCase
     OverloadedStrings
     RecordWildCards
-    ImportQualifiedPost 
+    ImportQualifiedPost
+    OverloadedRecordDot
 
 executable regulator-bot
   import:           warnings

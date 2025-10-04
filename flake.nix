@@ -1,5 +1,5 @@
 {
-  description = "floss-bot";
+  description = "regulator-bot";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -24,7 +24,7 @@
           };
         };
 
-        floss-bot = pkgs.haskell.lib.overrideCabal (hpkgs.callCabal2nix "floss-bot" ./. { }) (old: {
+        regulator-bot = pkgs.haskell.lib.overrideCabal (hpkgs.callCabal2nix "regulator-bot" ./. { }) (old: {
           doCheck = true;
           doHaddock = false;
           enableLibraryProfiling = false;
@@ -32,7 +32,7 @@
         });
       in
       {
-        packages.default = floss-bot;
+        packages.default = regulator-bot;
 
         devShells.default = pkgs.mkShell {
           buildInputs = [

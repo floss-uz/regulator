@@ -1,4 +1,4 @@
-# Telegram Rust Nix Template
+# Regulator bot
 
 This is FLOSS community Telegram bot. 
 

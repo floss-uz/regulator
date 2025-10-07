@@ -55,5 +55,16 @@ replyAnswer = \case
       ]
   ReplyShowGroups ->
     Text.unlines
-      [ "Floss hamjamiyatiga doir barcha guruhlar shu yerda joylashgan" -- TODO: Need correct reply text content, use multiline strings
+      [ "Floss hamjamiyatiga doir barcha guruhlar shu yerda joylashgan"
+      , ""
+      , "Xinux"
+      , "Rust Uzbekistan"
+      , "Haskell Uzbekistan"
+      , "DevOps Journey"
+      , "Scala Uzbekistan"
+      , "Ecma Uzbekistan"
+      , "Uzbek Localization"
+      , "PHP Uzbekistan"
+      , "Gofer Uzbekistan"
+      , "Uzinficom Open Source"
       ]

@@ -1,7 +1,21 @@
-# Regulator bot
 
-This is FLOSS community Telegram bot. 
+## About
 
+This is an assistant telegram bot for Floss Uzbekistan communtiy. It helps community members with various kind of tasks which you can check out in [features](#features) section!
+
+> Also, this telegram bot is a complience for [Floss Uzbekistan](https://std.floss.uz)'s standartization.
+
+## Features
+
+These are features that was implemented within telegram bot. Features that are underdevelopment are marked `WIP`.
+
+- [WIP] Greet newcomers of the community (it's a trigger)
+- [WIP] Delete messages from Channel users (it's a trigger)
+- [WIP] Serve rules list for members (via `/rules`)
+- [WIP] Show other rust communities (via `/group`)
+- [WIP] Roadmap for newbies (via `/roadmap`)
+- [WIP] Share with more Rusty useful resources (via `/useful`)
+- [WIP] Warn user about off-topic message and redirect (via `/warn`)
 
 ## Development
 
@@ -28,7 +42,7 @@ nix develop -c $SHELL
 # your terminal inside your editor will adopt all
 # variables, so, you can close terminal.
 
-# Neovim
+# Vim
 vim .
 
 # VSCode
@@ -67,65 +81,28 @@ Deploying this project, telegram bot requires host machine to have its own flake
 
 ### Activation
 
-In your configuration, add your project repository to `inputs`.
-
-```nix
-{
-  inputs = {
-    # ...
-
-    # Let's imagine name of this project as `regulatorbot`
-    regulatorbot.url = "ithub.com:floss-uz/regulator.git";
-  };
-}
-```
-
-
+..
 
 ### Set up
 
-
+..
 
 ### Available default options
 
+..
+
 ## Working productions
 
-There are bunch of telegram bots that are using this template and are deployed to which you may refer as working examples:
-
-- [Xinux Assistant](https://t.me/xinuxmgrbot) - [GitHub](https://github.com/xinux-org/telegram) / [Deployed At](https://github.com/kolyma-labs/instances/blob/main/nixos/kolyma-2/services/xinux.nix)
-- [Rust Uzbekistan Assistant](https://t.me/rustaceanbot) - [GitHub](https://github.com/rust-lang-uz/telegram) / [Deployed At](https://github.com/kolyma-labs/instances/blob/main/nixos/kolyma-2/services/rustina.nix)
+..
 
 ## FAQ
 
+..
+
 ### Why not use default.nix for devShell?
 
-There's been cases when I wanted to reproduce totally different behaviors in development environment and
-production build. This occurs quite a lot lately for some reason and because of that, I tend to keep
-both shell.nix and default.nix to don't mix things up.
+..
 
 ### Error when building or entering development environment
 
-If you see something like that in the end:
-
-```
-error: hash mismatch in fixed-output derivation '/nix/store/fsrachja0ig5gijrkbpal1b031lzalf0-channel-rust-stable.toml.drv':
-  specified: sha256-vMlz0zHduoXtrlu0Kj1jEp71tYFXyymACW8L4jzrzNA=
-     got:    sha256-Hn2uaQzRLidAWpfmRwSRdImifGUCAb9HeAqTYFXWeQk=
-```
-
-Just know that something in that version of rustup changed or sha is outdated, so, just copy whatever
-shown in `got` and place that in both `default.nix` and `shell.nix` at:
-
-```
-  # Rust Toolchain via fenix
-  toolchain = fenix.packages.${pkgs.system}.fromToolchainFile {
-    file = ./rust-toolchain.toml;
-
-    # Bla bla bla bla bla, bla bla bla.
-    #                     REPLACE THIS LONG THING!
-    sha256 = "sha256-Hn2uaQzRLidAWpfmRwSRdImifGUCAb9HeAqTYFXWeQk=";
-  };
-```
-
-[Xinux Community]: https://github.com/xinux-org
-[available default options]: #available-default-options
+..

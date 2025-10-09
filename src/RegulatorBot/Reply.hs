@@ -21,13 +21,8 @@ replyStart = do
       { inlineKeyboardMarkupInlineKeyboard =
           [mkButton <$> [("Jamiyat", "https://t.me/flossuzc"), ("Web Sahifa", "https://floss.uz")]]
       }
-  replyMsgTxt =
-    Text.unlines
-      [ "Assalomu alaykum, hurmatli haker! "
-      , "Floss jamiyati haqida hammasi shu yerda"
-      ]
   replyMsg =
-    (toReplyMessage replyMsgTxt)
+    (toReplyMessage $ replyAnswer ReplyStart)
       { replyMessageReplyMarkup = Just $ SomeInlineKeyboardMarkup keyboard
       }
 
@@ -42,11 +37,23 @@ replyCommunities model = do
       { inlineKeyboardMarkupInlineKeyboard =
           [mkButton <$> c]
       }
-  replyMsgTxt =
+  replyMsg c =
+    (toReplyMessage $ replyAnswer ReplyShowGroups)
+      { replyMessageReplyMarkup = Just $ SomeInlineKeyboardMarkup (keyboard c)
+      }
+
+data ReplyAnswerType
+  = ReplyStart
+  | ReplyShowGroups
+
+replyAnswer :: ReplyAnswerType -> Text.Text
+replyAnswer = \case
+  ReplyStart ->
+    Text.unlines
+      [ "Assalomu alaykum, hurmatli haker! "
+      , "Floss jamiyati haqida hammasi shu yerda"
+      ]
+  ReplyShowGroups ->
     Text.unlines
       [ "Floss hamjamiyatiga doir barcha guruhlar shu yerda joylashgan" -- TODO: Need correct reply text content, use multiline strings
       ]
-  replyMsg c =
-    (toReplyMessage replyMsgTxt)
-      { replyMessageReplyMarkup = Just $ SomeInlineKeyboardMarkup (keyboard c)
-      }

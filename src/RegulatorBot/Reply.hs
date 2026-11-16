@@ -55,5 +55,6 @@ replyAnswer = \case
       ]
   ReplyShowGroups ->
     Text.unlines
-      [ "Floss hamjamiyatiga doir barcha guruhlar shu yerda joylashgan" -- TODO: Need correct reply text content, use multiline strings
+      [ "Floss hamjamiyatiga aʼzo jamoalar roʻyxati."
+      , "Jamoa nomini bosib, uning GitHub sahifasiga oʻting."
       ]
